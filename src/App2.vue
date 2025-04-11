@@ -1,6 +1,7 @@
 <script setup>
 
 import {ref} from "vue";
+import Page01 from "@/components/pages/page01.vue";
 
 const  rawHtml = '<strong>Hello!</strong>'
 
@@ -65,6 +66,19 @@ function doSomething(){
     <a @click="doSomething"> ... </a>
     <a :[attributeName]="url"> ... </a>
     <!--<a :['foo' + bar]="value"> 这会触发一个编译器警告 </a>-->
+    <!--我想在这里加一个跳转也没-->
+    <hr>
+    <a>我想在这里加一个跳转页面<br></a>
+
+    <nav>
+       <router-link to="/page01">page01</router-link>
+       <router-link to="/page02">page02</router-link>
+       <router-link to="/page03">page03</router-link>
+       <router-link to="/page04">page04</router-link>
+       <router-link to="/page05">page05</router-link>
+    </nav>
+   <router-view/>
+    <hr/>
   </div>
 
 </template>
